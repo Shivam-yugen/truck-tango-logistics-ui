@@ -9,8 +9,12 @@ const Index = () => {
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold text-purple-900">Lockdown Logistics</h1>
-          <div className="flex justify-center items-center h-16 relative">
-            <Truck className="text-purple-600 w-8 h-8 absolute animate-truck" />
+          <div className="flex flex-col items-center">
+            <div className="w-full h-24 relative road rounded-lg">
+              <Truck className="text-purple-800 w-10 h-10 absolute top-1/2 -translate-y-1/2 animate-truck shadow-lg" />
+              <Truck className="text-purple-700 w-10 h-10 absolute top-1/2 -translate-y-1/2 animate-truck-2 shadow-lg" />
+              <Truck className="text-purple-600 w-10 h-10 absolute top-1/2 -translate-y-1/2 animate-truck-3 shadow-lg" />
+            </div>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Optimize your logistics operations by calculating the minimum number of trucks needed to serve multiple cities with specific demands and deadlines.

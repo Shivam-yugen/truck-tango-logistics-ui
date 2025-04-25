@@ -81,3 +81,48 @@
 .animate-truck {
   animation: truck-move 4s infinite linear;
 }
+
+.animate-truck-2 {
+  animation: truck-move 4s infinite linear;
+  animation-delay: 1.3s;
+}
+
+.animate-truck-3 {
+  animation: truck-move 4s infinite linear;
+  animation-delay: 2.6s;
+}
+
+.road {
+  background: linear-gradient(to bottom, 
+    #888888 0%,
+    #666666 20%,
+    #444444 40%,
+    #666666 60%,
+    #888888 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.road::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ffffff;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to right, #ffffff 50%, transparent 50%);
+  background-size: 20px 100%;
+  animation: moveRoad 1s linear infinite;
+}
+
+@keyframes moveRoad {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20px 0;
+  }
+}
