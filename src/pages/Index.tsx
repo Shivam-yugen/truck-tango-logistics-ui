@@ -1,7 +1,6 @@
 
 import { Card } from "@/components/ui/card";
 import LogisticsForm from "@/components/LogisticsForm";
-import { Truck } from "lucide-react";
 
 const Index = () => {
   return (
@@ -10,10 +9,17 @@ const Index = () => {
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold text-purple-900">Lockdown Logistics</h1>
           <div className="flex flex-col items-center">
-            <div className="w-full h-24 relative road rounded-lg">
-              <Truck className="text-purple-800 w-10 h-10 absolute top-1/2 -translate-y-1/2 animate-truck shadow-lg" />
-              <Truck className="text-purple-700 w-10 h-10 absolute top-1/2 -translate-y-1/2 animate-truck-2 shadow-lg" />
-              <Truck className="text-purple-600 w-10 h-10 absolute top-1/2 -translate-y-1/2 animate-truck-3 shadow-lg" />
+            <div className="w-full h-64 relative scenic-road rounded-lg overflow-hidden">
+              <div className="mountains absolute inset-0"></div>
+              <div className="trees absolute inset-0"></div>
+              <div className="road absolute bottom-0 w-full h-24">
+                <div className="guard-rail"></div>
+                <img 
+                  src="/lovable-uploads/ab61a702-915f-45cb-85a0-97cca203dab4.png" 
+                  alt="Truck on scenic road" 
+                  className="w-32 absolute bottom-4 animate-truck"
+                />
+              </div>
             </div>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
