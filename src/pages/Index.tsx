@@ -1,6 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import LogisticsForm from "@/components/LogisticsForm";
+import { Truck } from "lucide-react";
 
 const Index = () => {
   return (
@@ -8,6 +9,9 @@ const Index = () => {
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold text-purple-900">Lockdown Logistics</h1>
+          <div className="flex justify-center items-center h-16 relative">
+            <Truck className="text-purple-600 w-8 h-8 absolute animate-truck" />
+          </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Optimize your logistics operations by calculating the minimum number of trucks needed to serve multiple cities with specific demands and deadlines.
           </p>
